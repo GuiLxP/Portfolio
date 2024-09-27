@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FiMail } from "react-icons/fi";
 import { MdOutlineBadge } from "react-icons/md";
@@ -67,7 +68,11 @@ export default function Hero() {
             </p>
           )}
 
-          <button className="primary-btn">Contact Me</button>
+          <button className="primary-btn">
+            <Link to="contact" smooth spy>
+              Contact
+            </Link>
+          </button>
         </div>
         <div className="flex gap-2 justify-center md:gap-3 lg:gap-5 z-[1]">
           <div className="w-[403px] bg-gradient-to-br from-blue-950 to-slate-900 rounded-lg border border-blue-950 p-6">
@@ -121,18 +126,26 @@ export default function Hero() {
             )}
             <div className="flex items-center gap-2 flex-wrap">
               <div className="bg-blue-800/30 p-2 rounded">
-                <FaGithub className="text-lg md:text-xl hover:cursor-pointer" onClick={() => window.open("https://github.com/guilxp", "_blank")}/>
+                <FaGithub
+                  className="text-lg md:text-xl hover:cursor-pointer"
+                  onClick={() =>
+                    window.open("https://github.com/guilxp", "_blank")
+                  }
+                />
               </div>
               <div className="bg-blue-800/30 p-2 rounded">
-                <FaLinkedin className="text-lg md:text-xl hover:cursor-pointer" onClick={() => window.open("https://www.linkedin.com/in/guilxp/", "_blank")} />
+                <FaLinkedin
+                  className="text-lg md:text-xl hover:cursor-pointer"
+                  onClick={() =>
+                    window.open("https://www.linkedin.com/in/guilxp/", "_blank")
+                  }
+                />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="ui-circle absolute top-6 md:top-10 -left-10 md:left-0">
-
-        </div>
+        <div className="ui-circle absolute top-6 md:top-10 -left-10 md:left-0"></div>
       </section>
     </>
   );
