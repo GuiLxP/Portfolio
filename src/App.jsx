@@ -16,7 +16,7 @@ export default function App() {
           style={{
             backgroundImage: `url(${BG_GRADIENT})`,
             backgroundSize: "cover",
-            backgroundPosition: "",
+            backgroundPosition: "80%",
           }}
         >
           <Navbar />
