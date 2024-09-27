@@ -7,12 +7,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import PROFILE_PIC_2 from "../assets/profile-pic-2.jpeg";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function Hero() {
   const [profileData, setProfileData] = useState({});
 
   const fetchAPI = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/PROFILE_DATA");
+      const response = await axios.get(`${apiUrl}/PROFILE_DATA`);
       const data = response.data.profile_data;
 
       const nameData = data.find((item) => item.name);

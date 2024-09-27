@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import PROFILE_PIC_1 from "../assets/profile-pic-1.jpg";
+
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function AboutMe() {
   const [aboutData, setAboutData] = useState({});
 
   const fetchAPI = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/ABOUT_ME_DATA");
+      const response = await axios.get(`${apiUrl}/ABOUT_ME_DATA`);
       const data = response.data.about_data;
 
       const idData = data.find((item) => item.id);

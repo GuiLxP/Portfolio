@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function WorkExperience() {
   const [experienceData, setExperienceData] = useState([]);
 
   const fetchAPI = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/EXPERIENCE_DATA");
+      const response = await axios.get(`${apiUrl}/EXPERIENCE_DATA`);
       const data = response.data.experience_data;
       setExperienceData(data);
     } catch (error) {

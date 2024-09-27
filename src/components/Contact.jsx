@@ -5,6 +5,8 @@ import { IoMdMail } from "react-icons/io";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { MdOutlineWeb } from "react-icons/md";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function Contact() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
@@ -15,7 +17,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/send-email", {
+      await axios.post(`${apiUrl}/send-email`, {
         fullname,
         email,
         message,
@@ -33,7 +35,7 @@ export default function Contact() {
   const [contactData, setContactData] = useState({});
   const fetchAPI = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/CONTACT_DATA");
+      const response = await axios.get(`${apiUrl}/CONTACT_DATA`);
       const data = response.data.contact_data;
 
       const idData = data.find((item) => item.id);

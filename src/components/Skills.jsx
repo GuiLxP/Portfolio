@@ -26,12 +26,14 @@ const iconMap = {
   SiPhp: SiPhp,
 };
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function Skills() {
   const [skillsData, setSkills] = useState([]);
 
   const fetchAPI = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/SKILLS_DATA");
+      const response = await axios.get(`${apiUrl}/SKILLS_DATA`);
       const data = response.data.skills_data;
       setSkills(data);
     } catch (error) {
