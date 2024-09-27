@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
 import Footer from "./components/Footer"
 
-import BG_GRADIENT from "./assets/bg-gradiente-1.png";
+import BG_GRADIENT from "./assets/bg-test.svg";
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
           style={{
             backgroundImage: `url(${BG_GRADIENT})`,
             backgroundSize: "cover",
-            backgroundPosition: "50% 50%",
+            backgroundPosition: "",
           }}
         >
           <Navbar />

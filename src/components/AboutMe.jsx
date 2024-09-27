@@ -61,7 +61,7 @@ export default function AboutMe() {
           <div className="col-span-2 bg-gradient-to-br from-blue-950 to-slate-900 rounded-lg border border-blue-800/40 p-6">
             <p className="text-blue-50 text-xs md:text-[13px] font-normal text-justify leading-6">
               {aboutData.introduction} {aboutData.background}
-              {aboutData.interests}
+              &nbsp;{aboutData.interests}
             </p>
 
             <br />

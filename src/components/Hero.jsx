@@ -53,7 +53,7 @@ export default function Hero() {
         id="hero"
       >
         <div className="flex-1 text-center md:text-left z-[1]">
-          <span className="text-xs md:text-sm text-blue-200 font-thin">
+          <span className="text-xs md:text-sm text-blue-200 font-nomal">
             A Full Stack Developer
           </span>
           {profileData.name && (
