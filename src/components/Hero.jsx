@@ -68,11 +68,16 @@ export default function Hero() {
             </p>
           )}
 
-          <button className="primary-btn">
+          <button className="primary-btn mx-4 my-2 md:mx-2 md:my-4">
             <Link to="contact" smooth spy>
               Contact
             </Link>
           </button>
+          <a href="/Guilherme Pantoja Resume (EN).pdf" download>
+            <button className="primary-btn mx-4 my-2 md:mx-2 md:my-4">
+              Download Resume
+            </button>
+          </a>
         </div>
         <div className="flex gap-2 justify-center md:gap-3 lg:gap-5 z-[1]">
           <div className="w-[403px] bg-gradient-to-br from-blue-950 to-slate-900 rounded-lg border border-blue-950 p-6">
